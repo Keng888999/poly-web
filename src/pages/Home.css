@@ -1,0 +1,162 @@
+/* Home.css */
+
+/* Home.css */
+
+/* ตั้งค่า container หลัก */
+.home-container {
+    display: flex;
+    flex-direction: column; /* ให้จัดเรียงเนื้อหาในแนวตั้ง */
+    justify-content: flex-start; /* เริ่มต้นจากด้านบน */
+    align-items: center; /* จัดให้อยู่กลางแนวนอน */
+    min-height: calc(100vh - 80px); /* ให้พื้นที่ความสูงเหลือจาก Navbar */
+    padding: 2rem 1rem; /* ระยะห่างรอบด้าน */
+    background-color: #1a1a1a; /* สีพื้นหลัง */
+  }
+
+  
+  /* ตั้งค่าเนื้อหาภายใน container */
+  .home-content {
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    max-width: 1000px; /* กำหนดความกว้างสูงสุดของ container */
+    width: 100%; /* ให้ใช้ความกว้างเต็มที่ */
+    background-color: #474747; /* พื้นหลังของ container */
+    padding: 2rem;
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงาบริเวณ container */
+  }
+  
+  /* หัวข้อใหญ่ */
+  .home-title {
+    font-size: 2.2rem; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    color: #d69e2e; /* สีของตัวอักษร */
+    margin-bottom: 2rem; /* ระยะห่างจากข้อความด้านล่าง */
+  }
+/* ตั้งค่า container สำหรับแต่ละหัวข้อข้อมูล */
+.home-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ลดขนาดของแต่ละ container ให้เล็กลง */
+    gap: 1.5rem; /* ลดระยะห่างระหว่างแต่ละ container */
+    margin-top: 2rem; /* ระยะห่างจากหัวข้อใหญ่ */
+  }
+  
+  /* ตั้งค่าการจัดรูปแบบของแต่ละ info-item */
+  .info-item {
+    background-color: #1a1a1a;
+    padding: 1rem; /* ลดระยะห่างภายใน */
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงาบริเวณ container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ขนาดของ container จะถูกควบคุมโดย grid template */
+  }
+  
+  .info-item:hover {
+    transform: translateY(-5px); /* การยกตัวขึ้นเมื่อ hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* เงาใหญ่ขึ้นเมื่อ hover */
+  }
+  
+  /* หัวข้อของข้อมูลแต่ละตัว */
+  .info-title {
+    font-size: 1.5rem; /* ลดขนาดตัวอักษรของหัวข้อ */
+    font-weight: bold; /* ตัวหนา */
+    color: #d69e2e; /* สีของหัวข้อ */
+    margin-bottom: 1rem; /* ระยะห่างจากข้อความด้านล่าง */
+  }
+  
+  /* รายละเอียดของข้อมูล */
+  .info-description {
+    font-size: 0.9rem; /* ลดขนาดตัวอักษร */
+    color: #ffffff; /* สีของข้อความ */
+    line-height: 1.4; /* ความสูงของบรรทัด */
+  }
+
+  .info-description:hover {
+    color: #d69e2e;
+    cursor: pointer;
+  }
+  
+/* Container ของแกลเลอรี */
+.image-gallery-container {
+  align-items: center;
+  margin-top: 2rem; /* ระยะห่างจาก container หลัก */
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #474747;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อของแกลเลอรี */
+.gallery-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d69e2e;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid ของแกลเลอรี */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* แบ่ง container ตามขนาด */
+  gap: 1rem; /* ระยะห่างระหว่าง containers */
+}
+
+/* Container สำหรับแต่ละรูปภาพ */
+.image-item {
+  background-color: #1a1a1a; /* สีพื้นหลัง */
+  border-radius: 8px; /* ขอบมน */
+  height: 150px; /* ความสูงของ container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงาบริเวณ container */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* ป้องกันรูปภาพออกจากขอบ */
+}
+
+/* รูปภาพในแต่ละ container */
+.gallery-image {
+  width: 100%; /* ทำให้ภาพมีความกว้างเต็ม container */
+  height: 100%; /* ทำให้ภาพมีความสูงเต็ม container */
+  object-fit: cover; /* ปรับให้ภาพเต็ม container โดยไม่เสียสัดส่วน */
+}
+
+/* Hover effect */
+.image-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Container ใหม่ที่จะเพิ่มหลังแกลเลอรี */
+.new-container {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #474747; /* พื้นหลังของ container */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem; /* ระยะห่างจาก container ของแกลเลอรี */
+  text-align: center;
+}
+
+/* หัวข้อใหม่ */
+.new-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d69e2e;
+  margin-bottom: 1rem;
+}
+
+/* ข้อความภายใน container ใหม่ */
+.new-description {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.new-description:hover {
+  color: #d69e2e;
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+/* Navbar.css */
+.navbar-container {
+  display: flex;
+  flex-direction: column; /* จัดตำแหน่งเนื้อหาในแนวตั้ง */
+  align-items: center; /* จัดข้อความให้อยู่กลาง */
+  justify-content: center; /* จัดข้อความให้อยู่กลางในแนวตั้ง */
+  padding: 2rem; /* ระยะห่างจากขอบ */
+  background-color: #1a1a1a; /* สีพื้นหลัง */
+}
+
+.navbar-title-container {
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  margin-bottom: 1rem; /* ระยะห่างจากข้อความไปยัง navbar */
+}
+
+.navbar-title {
+  font-size: 2.5rem; /* ขนาดตัวอักษรของหัวข้อหลัก */
+  font-weight: bold; /* ตัวอักษรหนา */
+  color: #d69e2e; /* สีตัวอักษร */
+}
+
+.navbar-subtitle {
+  font-size: 1.2rem; /* ขนาดตัวอักษรของข้อความรอง */
+  color: #ffffff; /* สีตัวอักษร */
+}
+
+.navbar {
+  width: 100%; /* ให้ Navbar ใช้ความกว้างเต็ม */
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลาง */
+  background-color: #474747; /* พื้นหลังของ Navbar เป็นสีขาว */
+  padding: 1rem 0;
+  border-top: 3px solid #d69e2e; /* เส้นกั้นด้านบน */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem; /* เพิ่มระยะห่างระหว่างแต่ละลิงก์ */
+}
+
+.navbar-link {
+  padding: 0.5rem 1rem; /* ขนาดของปุ่ม */
+  border-radius: 0.375rem; /* ขอบมน */
+  color: white; /* สีตัวอักษรของลิงก์ที่ไม่ได้เลือก */
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  font-weight: bold; /* ทำให้ตัวอักษรเป็นตัวหนา */
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, text-decoration 0.3s; /* เปลี่ยนสีพื้นหลัง, เงา, สีตัวอักษร และเส้นใต้ */
+}
+
+.navbar-link:hover {
+  background-color: #fbd38d; /* สีพื้นหลังเมื่อ hover เป็นสีเหลือง */
+  color: #d69e2e; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+}
+
+.navbar-link.active {
+  font-weight: bold; /* ทำให้ตัวอักษรเป็นตัวหนาเมื่อถูกเลือก */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาด้านหลังเมื่อลิงก์ถูกเลือก */
+  text-decoration: underline; /* เพิ่มเส้นใต้เมื่อถูกเลือก */
+  color: #d69e2e; /* เปลี่ยนสีตัวอักษรเมื่อเลือกเป็นสีเหลือง */
+}
