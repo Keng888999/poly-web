@@ -1,101 +1,88 @@
-/* Courses.css */
-
-/* ตั้งค่าหลักของ container */
+/* ตั้งค่า container หลัก */
 .courses-container {
-    display: flex;
-    flex-direction: column; /* จัดให้เนื้อหาทั้งหมดอยู่ในแนวตั้ง */
-    justify-content: flex-start;
-    align-items: center; /* จัดให้อยู่กลาง */
-    padding-top: 2rem;
-    background-color: #1a1a1a;
-    min-height: 100vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  /* Container หลักของเนื้อหาคอร์ส */
-  .courses-content {
-    text-align: center;
-    max-width: 1000px;
-    width: 100%;
-    background-color: #474747;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem; /* เพิ่มระยะห่างจาก container ใหม่ */
-  }
-  
-  /* หัวข้อของ Courses */
-  .courses-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #d69e2e;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* รายละเอียดของ Courses */
-  .courses-description {
-    font-size: 1.1rem;
-    color: #ffffff;
-    line-height: 1.6;
-  }
-  
-  /* ส่วนของ PDF */
-  .pdf-container {
-    text-align: center;
-    max-width: 1000px;
-    width: 100%;
-    background-color: #474747;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* หัวข้อของ PDF */
-  .pdf-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #d69e2e;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* ส่วนของการแสดงผล PDF */
-  .pdf-viewer {
-    width: 100%;
-    height: 600px; /* กำหนดความสูงของ PDF Viewer */
-    background-color: #000000;
-    margin-bottom: 2rem;
-  }
-  
-  /* ปุ่มดาวน์โหลด PDF */
-  .download-btn {
-    background-color: #d69e2e;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-right: 1rem;
-    cursor: pointer;
-  }
-  
-  .download-btn:hover {
-    background-color: #b68b2f; /* สีเข้มขึ้นเมื่อ hover */
-  }
-  
-  /* ปุ่มปิด PDF */
-  .close-pdf-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .close-pdf-btn:hover {
-    background-color: #c0392b; /* สีเข้มขึ้นเมื่อ hover */
-  }
-  
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.courses-title {
+  font-size: 2rem;
+  color: #d69e2e;
+  margin-bottom: 1.5rem;
+}
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.pdf-item {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-button {
+  margin-top: 1rem;
+  background-color: #d69e2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #b38b1a;
+}
+
+/* การตั้งค่าสำหรับ Modal */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  width: 80%;
+  height: 80%;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #000;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.pdf-viewer {
+  height: 100%;
+  overflow: hidden;
+}
+
+.some-class {
+  color: var(--undefined-variable, #000); /* ใช้สีดำเป็น fallback */
+}
+
