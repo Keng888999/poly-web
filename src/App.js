@@ -10,7 +10,6 @@ function App() {
         <Route path="/" element={<div>Home Page</div>} />
         <Route path="/test" element={<div>Test Page</div>} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/view-pdf/:id" element={<ViewPdf />} />
       </Routes>
     </Router>
   );

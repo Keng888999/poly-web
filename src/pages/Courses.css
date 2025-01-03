@@ -1,54 +1,84 @@
-/* ตั้งค่า container หลัก */
+/* ตั้งค่าพื้นฐาน */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a1a1a; /* สีเดียวกับ .courses-container */
+}
+
+/* ให้ .courses-container ยืดเต็มหน้า */
 .courses-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  min-height: 100vh; /* ทำให้ container ยืดเต็มความสูงของ viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
-  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.courses-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #474747;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .courses-title {
   font-size: 2rem;
+  font-weight: bold;
   color: #d69e2e;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
+
+.courses-description {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ตกแต่ง PDF Grid */
 .pdf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
 
 .pdf-item {
   background-color: #1a1a1a;
-  color: #fff;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.view-button {
-  margin-top: 1rem;
+.pdf-button {
   background-color: #d69e2e;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.view-button:hover {
-  background-color: #b38b1a;
+.pdf-button:hover {
+  background-color: #b5841c;
 }
 
-/* การตั้งค่าสำหรับ Modal */
+/* Modal */
 .pdf-modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
@@ -56,33 +86,29 @@
   z-index: 1000;
 }
 
-.modal-content {
+.pdf-modal-content {
   position: relative;
-  background-color: #ffffff;
   width: 80%;
   height: 80%;
-  border-radius: 8px;
+  background-color: white;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  color: #000;
-  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: red;
+  color: white;
   border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.pdf-viewer {
-  height: 100%;
-  overflow: hidden;
+.close-button:hover {
+  background-color: darkred;
 }
-
-.some-class {
-  color: var(--undefined-variable, #000); /* ใช้สีดำเป็น fallback */
-}
-

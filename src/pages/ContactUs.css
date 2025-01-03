@@ -1,0 +1,128 @@
+/* ตั้งค่า container หลัก */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem 1rem;
+    background-color: #1a1a1a;
+  }
+  
+  /* Container สำหรับเนื้อหาการติดต่อ */
+  .contact-content {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #474747;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* หัวข้อใหญ่ */
+  .contact-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #d69e2e;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* รายละเอียดข้อมูลการติดต่อ */
+  .contact-description {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Container สำหรับข้อมูลการติดต่อ */
+  .contact-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* แต่ละข้อมูลการติดต่อ */
+  .contact-item {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d69e2e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info-description {
+    font-size: 0.9rem;
+    color: #ffffff;
+    line-height: 1.4;
+  }
+  
+  /* Section สำหรับฟอร์มการติดต่อ */
+  .contact-form-container {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #474747;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* หัวข้อฟอร์ม */
+  .form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d69e2e;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ฟอร์ม */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .form-input {
+    height: 40px;
+  }
+  
+  .form-textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form-button {
+    background-color: #d69e2e;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #b5841c;
+  }
+  
