@@ -24,7 +24,7 @@
   .contact-title {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #d69e2e;
+    color: #9eff4f;
     margin-bottom: 1.5rem;
   }
   
@@ -54,7 +54,7 @@
   .contact-info-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #d69e2e;
+    color: #9eff4f;
     margin-bottom: 0.5rem;
   }
   
@@ -80,7 +80,7 @@
   .form-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #d69e2e;
+    color: #9eff4f;
     margin-bottom: 1.5rem;
   }
   
@@ -111,7 +111,7 @@
   }
   
   .form-button {
-    background-color: #d69e2e;
+    background-color: #9eff4f;
     color: white;
     font-size: 1rem;
     font-weight: bold;
@@ -123,6 +123,6 @@
   }
   
   .form-button:hover {
-    background-color: #b5841c;
+    background-color: #9eff4f;
   }
   

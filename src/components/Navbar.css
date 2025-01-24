@@ -16,7 +16,7 @@
 .navbar-title {
   font-size: 2.5rem; /* ขนาดตัวอักษรของหัวข้อหลัก */
   font-weight: bold; /* ตัวอักษรหนา */
-  color: #d69e2e; /* สีตัวอักษร */
+  color: #9eff4f; /* สีตัวอักษร */
 }
 
 .navbar-subtitle {
@@ -30,7 +30,7 @@
   justify-content: center; /* จัดให้อยู่ตรงกลาง */
   background-color: #474747; /* พื้นหลังของ Navbar เป็นสีขาว */
   padding: 1rem 0;
-  border-top: 3px solid #d69e2e; /* เส้นกั้นด้านบน */
+  border-top: 3px solid #9eff4f; /* เส้นกั้นด้านบน */
 }
 
 .navbar-links {
@@ -49,12 +49,12 @@
 
 .navbar-link:hover {
   background-color: #fbd38d; /* สีพื้นหลังเมื่อ hover เป็นสีเหลือง */
-  color: #d69e2e; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+  color: #9eff4f; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
 }
 
 .navbar-link.active {
   font-weight: bold; /* ทำให้ตัวอักษรเป็นตัวหนาเมื่อถูกเลือก */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาด้านหลังเมื่อลิงก์ถูกเลือก */
   text-decoration: underline; /* เพิ่มเส้นใต้เมื่อถูกเลือก */
-  color: #d69e2e; /* เปลี่ยนสีตัวอักษรเมื่อเลือกเป็นสีเหลือง */
+  color: #9eff4f; /* เปลี่ยนสีตัวอักษรเมื่อเลือกเป็นสีเหลือง */
 }

@@ -29,7 +29,7 @@
   .home-title {
     font-size: 2.2rem; /* ขนาดตัวอักษร */
     font-weight: bold; /* ตัวหนา */
-    color: #d69e2e; /* สีของตัวอักษร */
+    color: #9eff4f; /* สีของตัวอักษร */
     margin-bottom: 2rem; /* ระยะห่างจากข้อความด้านล่าง */
   }
 /* ตั้งค่า container สำหรับแต่ละหัวข้อข้อมูล */
@@ -59,7 +59,7 @@
   .info-title {
     font-size: 1.5rem; /* ลดขนาดตัวอักษรของหัวข้อ */
     font-weight: bold; /* ตัวหนา */
-    color: #d69e2e; /* สีของหัวข้อ */
+    color: #9eff4f; /* สีของหัวข้อ */
     margin-bottom: 1rem; /* ระยะห่างจากข้อความด้านล่าง */
   }
   
@@ -71,7 +71,7 @@
   }
 
   .info-description:hover {
-    color: #d69e2e;
+    color: #9eff4f;
     cursor: pointer;
   }
   
@@ -92,36 +92,55 @@
 .gallery-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #d69e2e;
+  color: #73ff00;
   margin-bottom: 1.5rem;
 }
 
 /* Grid ของแกลเลอรี */
 .image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* แบ่ง container ตามขนาด */
-  gap: 1rem; /* ระยะห่างระหว่าง containers */
-}
-
-/* Container สำหรับแต่ละรูปภาพ */
-.image-item {
-  background-color: #1a1a1a; /* สีพื้นหลัง */
-  border-radius: 8px; /* ขอบมน */
-  height: 150px; /* ความสูงของ container */
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงาบริเวณ container */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* ป้องกันรูปภาพออกจากขอบ */
 }
 
-/* รูปภาพในแต่ละ container */
 .gallery-image {
-  width: 100%; /* ทำให้ภาพมีความกว้างเต็ม container */
-  height: 100%; /* ทำให้ภาพมีความสูงเต็ม container */
-  object-fit: cover; /* ปรับให้ภาพเต็ม container โดยไม่เสียสัดส่วน */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.faculty-name {
+  margin-top: -15px; /* ลดระยะห่างระหว่างรูปภาพและชื่อภาษาไทย */
+  font-size: 16px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.faculty-enname {
+  margin-top: 2px; /* ลดระยะห่างระหว่างชื่อภาษาไทยและชื่อภาษาอังกฤษ */
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.faculty-department {
+  margin-top: -15px; /* ลดระยะห่างระหว่างชื่อภาษาอังกฤษและแผนก */
+  text-align: center;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* ลดช่องว่างระหว่างข้อความแต่ละบรรทัด */
+  width: 200px; /* ปรับขนาดรูปและข้อความให้อยู่ในพื้นที่เดียวกัน */
+}
+
 
 /* Hover effect */
 .image-item:hover {
@@ -145,7 +164,7 @@
 .new-title {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #d69e2e;
+  color: #73ff00;
   margin-bottom: 1rem;
 }
 
@@ -157,6 +176,38 @@
 }
 
 .new-description:hover {
-  color: #d69e2e;
+  color: #73ff00;
   cursor: pointer;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #73ff00;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #9eff4f;
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+}
+
+.back-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
 }

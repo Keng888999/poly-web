@@ -21,27 +21,7 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <NavLink 
-            to="/about-us" 
-            className="navbar-link" 
-            activeClassName="active"
-          >
-            About Us
-          </NavLink>
-          <NavLink 
-            to="/courses" 
-            className="navbar-link" 
-            activeClassName="active"
-          >
-            Courses
-          </NavLink>
-          <NavLink 
-            to="/contact-us" 
-            className="navbar-link" 
-            activeClassName="active"
-          >
-            Contact Us
-          </NavLink>
+           
         </div>
       </nav>
     </div>
