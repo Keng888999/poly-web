@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/poly-web/static/css/main.7128a435.css",
+    "main.js": "/poly-web/static/js/main.ade8965d.js",
+    "index.html": "/poly-web/index.html",
+    "main.7128a435.css.map": "/poly-web/static/css/main.7128a435.css.map",
+    "main.ade8965d.js.map": "/poly-web/static/js/main.ade8965d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7128a435.css",
+    "static/js/main.ade8965d.js"
+  ]
+}
