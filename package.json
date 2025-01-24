@@ -1,8 +1,8 @@
 {
   "name": "it-poly",
   "version": "0.1.0",
+  "homepage": "https://keng888999.github.io/poly-web/",
   "private": true,
-  "homepage": " https://despot-aetius-critius.github.io/itpoly-web/",
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
     "bootstrap": "^5.3.3",
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "postcss-preset-env": "^10.1.3"
   }
